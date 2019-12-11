@@ -1,7 +1,6 @@
 import org.graalvm.polyglot.Context;
 import org.graalvm.polyglot.Value;
 import java.util.function.IntSupplier;
-import java.lang.System;
 
 public class Test {
 

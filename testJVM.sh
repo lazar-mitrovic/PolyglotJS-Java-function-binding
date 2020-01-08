@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 javac -d build Test.java
-java -classpath build Test
+java -agentlib:native-image-agent=config-merge-dir=META-INF/native-image -classpath build Test

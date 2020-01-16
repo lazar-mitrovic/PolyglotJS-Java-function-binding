@@ -6,9 +6,8 @@ public class Test {
 
     public static void main(String[] args) {
         Context polyglot = Context.newBuilder("js").allowAllAccess(true).build();
-        // when allowAllAccess(true) is removed from previous line
-        // ./testJVM.sh fails the same way as ./testSubstrate.sh
-        // (with UnsupportedMessageException)
+        // when reflection configuration is provided
+        // ./testJVM.sh and ./testSubstrate.sh work as intended
 
         polyglot.getBindings("js").putMember("func", new IntSupplier() {
             @Override
